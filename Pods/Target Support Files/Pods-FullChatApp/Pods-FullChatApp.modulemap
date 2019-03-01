@@ -1,0 +1,6 @@
+framework module Pods_FullChatApp {
+  umbrella header "Pods-FullChatApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
