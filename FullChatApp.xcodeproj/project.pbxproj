@@ -13,6 +13,7 @@
 		42CB0AF82229852A00B2CB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0AF72229852A00B2CB74 /* Assets.xcassets */; };
 		42CB0AFB2229852A00B2CB74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0AF92229852A00B2CB74 /* LaunchScreen.storyboard */; };
 		42CB0B0A222999D700B2CB74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0B09222999D700B2CB74 /* GoogleService-Info.plist */; };
+		42CB0B0C2229C00200B2CB74 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0B0B2229C00200B2CB74 /* RegisterVC.swift */; };
 		F3EC85E10B8112868A779506 /* Pods_FullChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		42CB0AFA2229852A00B2CB74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42CB0AFC2229852A00B2CB74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42CB0B09222999D700B2CB74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42CB0B0B2229C00200B2CB74 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		452E13762CE99E82C7DF0EF9 /* Pods-FullChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FullChatApp/Pods-FullChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				42CB0AF22229852700B2CB74 /* LoginVC.swift */,
+				42CB0B0B2229C00200B2CB74 /* RegisterVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CB0B0C2229C00200B2CB74 /* RegisterVC.swift in Sources */,
 				42CB0AF32229852700B2CB74 /* LoginVC.swift in Sources */,
 				42CB0AF12229852700B2CB74 /* AppDelegate.swift in Sources */,
 			);
