@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ProgressHUD
+
 
 class LoginVC: UIViewController {
     
@@ -36,18 +38,46 @@ class LoginVC: UIViewController {
     }
     
     
+    func clearAllTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    
+    func loginUser(withEmail email:String,withPassword password:String) {
+        ProgressHUD.show("Loging in...")
+        FUser.loginUserWith(email: email, password: password) { (error) in
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            ProgressHUD.dismiss()
+            self.goToAppHome()
+        }
+    }
+    
+    
+    func goToAppHome() {
+        clearAllTextFields()
+
+    }
+    
+    
     
     //MARK:- IBActions
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
         guard let email = emailTextField.text, email != "" else {
+            ProgressHUD.showError("Email field cannot be empty")
             return
         }
         guard let password = passwordTextField.text, password != "" else {
+            ProgressHUD.showError("Password field cannot be empty")
             return
         }
-        print(email,password)
+        loginUser(withEmail: email, withPassword: password)
     }
 
     

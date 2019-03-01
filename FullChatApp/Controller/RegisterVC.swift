@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ProgressHUD
+
 
 class RegisterVC: UIViewController {
     
@@ -40,12 +42,52 @@ class RegisterVC: UIViewController {
         self.view.endEditing(true)
     }
     
+    func clearAllTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+    
+    func registerUser(withEmail email:String,withPassword password:String) {
+        ProgressHUD.show("Creating an account...")
+        FUser.registerUserWith(email: email, password: password, firstName: "", lastName: "") { (error) in
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            ProgressHUD.dismiss()
+            self.clearAllTextFields()
+            
+        }
+    }
+    
     
     
     //MARK:- IBActions
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
+        guard let email = emailTextField.text, email != "" else {
+            ProgressHUD.showError("Email field cannot be empty")
+            return
+        }
+        guard let password = passwordTextField.text, password != "" else {
+            ProgressHUD.showError("Password field cannot be empty")
+            return
+        }
+        guard let confirmPassword = confirmPasswordTextField.text, confirmPassword != "" else {
+            ProgressHUD.showError("ConfirmPassword field cannot be empty")
+            return
+        }
+        if password != confirmPassword {
+            ProgressHUD.showError("Passwords are not a match. Please make sure the password is same on both fields")
+            return
+        }
+        registerUser(withEmail: email, withPassword: password)
     }
     
 
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
