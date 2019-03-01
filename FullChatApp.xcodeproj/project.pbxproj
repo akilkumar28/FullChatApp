@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42CB0AF12229852700B2CB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0AF02229852700B2CB74 /* AppDelegate.swift */; };
-		42CB0AF32229852700B2CB74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0AF22229852700B2CB74 /* ViewController.swift */; };
+		42CB0AF32229852700B2CB74 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0AF22229852700B2CB74 /* LoginVC.swift */; };
 		42CB0AF62229852700B2CB74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0AF42229852700B2CB74 /* Main.storyboard */; };
 		42CB0AF82229852A00B2CB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0AF72229852A00B2CB74 /* Assets.xcassets */; };
 		42CB0AFB2229852A00B2CB74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CB0AF92229852A00B2CB74 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		42CB0AED2229852700B2CB74 /* FullChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CB0AF02229852700B2CB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42CB0AF22229852700B2CB74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42CB0AF22229852700B2CB74 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		42CB0AF52229852700B2CB74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42CB0AF72229852A00B2CB74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42CB0AFA2229852A00B2CB74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,54 @@
 		42CB0AEF2229852700B2CB74 /* FullChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				42CB0B062229912700B2CB74 /* Utilities */,
+				42CB0B052229910A00B2CB74 /* Services */,
+				42CB0B0422298A4900B2CB74 /* Model */,
+				42CB0B0322298A4700B2CB74 /* View */,
+				42CB0B0222298A4500B2CB74 /* Controller */,
 				42CB0AF02229852700B2CB74 /* AppDelegate.swift */,
-				42CB0AF22229852700B2CB74 /* ViewController.swift */,
 				42CB0AF42229852700B2CB74 /* Main.storyboard */,
 				42CB0AF72229852A00B2CB74 /* Assets.xcassets */,
 				42CB0AF92229852A00B2CB74 /* LaunchScreen.storyboard */,
 				42CB0AFC2229852A00B2CB74 /* Info.plist */,
 			);
 			path = FullChatApp;
+			sourceTree = "<group>";
+		};
+		42CB0B0222298A4500B2CB74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42CB0AF22229852700B2CB74 /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		42CB0B0322298A4700B2CB74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42CB0B0422298A4900B2CB74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42CB0B052229910A00B2CB74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		42CB0B062229912700B2CB74 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42CB0AF32229852700B2CB74 /* ViewController.swift in Sources */,
+				42CB0AF32229852700B2CB74 /* LoginVC.swift in Sources */,
 				42CB0AF12229852700B2CB74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boomAk.FullChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boomAk.FullChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
