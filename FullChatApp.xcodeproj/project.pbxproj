@@ -18,6 +18,7 @@
 		42CB0B102229C20F00B2CB74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0B0F2229C20F00B2CB74 /* Constants.swift */; };
 		42CB0B122229C55F00B2CB74 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0B112229C55F00B2CB74 /* FCollectionReference.swift */; };
 		42CB0B142229C65000B2CB74 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0B132229C65000B2CB74 /* HelperFunctions.swift */; };
+		42CB0B162229D28900B2CB74 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB0B152229D28900B2CB74 /* ProfileVC.swift */; };
 		F3EC85E10B8112868A779506 /* Pods_FullChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		42CB0B0F2229C20F00B2CB74 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42CB0B112229C55F00B2CB74 /* FCollectionReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		42CB0B132229C65000B2CB74 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		42CB0B152229D28900B2CB74 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		452E13762CE99E82C7DF0EF9 /* Pods-FullChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FullChatApp/Pods-FullChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			children = (
 				42CB0AF22229852700B2CB74 /* LoginVC.swift */,
 				42CB0B0B2229C00200B2CB74 /* RegisterVC.swift */,
+				42CB0B152229D28900B2CB74 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IDMPhotoBrowser/IDMPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/IQAudioRecorderController/IQAudioRecorderController.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
@@ -270,6 +274,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDMPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQAudioRecorderController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
@@ -318,6 +323,7 @@
 				42CB0B122229C55F00B2CB74 /* FCollectionReference.swift in Sources */,
 				42CB0B102229C20F00B2CB74 /* Constants.swift in Sources */,
 				42CB0B0C2229C00200B2CB74 /* RegisterVC.swift in Sources */,
+				42CB0B162229D28900B2CB74 /* ProfileVC.swift in Sources */,
 				42CB0AF32229852700B2CB74 /* LoginVC.swift in Sources */,
 				42CB0AF12229852700B2CB74 /* AppDelegate.swift in Sources */,
 				42CB0B0E2229C1EB00B2CB74 /* FUser.swift in Sources */,

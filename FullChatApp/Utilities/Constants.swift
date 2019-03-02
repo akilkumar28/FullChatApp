@@ -132,3 +132,11 @@ public let kWITHUSERFULLNAME = "withUserFullName"
 public let kCALLERAVATAR = "callerAvatar"
 public let kWITHUSERAVATAR = "withUserAvatar"
 
+
+
+
+
+// Segue identifiers
+
+public let REGISTER_VC_TO_PROFILE_VC_SEGUE_IDENTIFIER = "toProfileVC"
+

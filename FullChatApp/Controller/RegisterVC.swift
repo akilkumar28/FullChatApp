@@ -48,19 +48,15 @@ class RegisterVC: UIViewController {
         confirmPasswordTextField.text = ""
     }
     
-    func registerUser(withEmail email:String,withPassword password:String) {
-        ProgressHUD.show("Creating an account...")
-        FUser.registerUserWith(email: email, password: password, firstName: "", lastName: "") { (error) in
-            if error != nil {
-                ProgressHUD.showError(error!.localizedDescription)
-                return
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let desitnation = segue.destination as? ProfileVC {
+            if let sender = sender as? [String] {
+                desitnation.email = sender[0]
+                desitnation.password = sender[1]
             }
-            ProgressHUD.dismiss()
-            self.clearAllTextFields()
-            
         }
     }
-    
     
     
     //MARK:- IBActions
@@ -83,7 +79,8 @@ class RegisterVC: UIViewController {
             ProgressHUD.showError("Passwords are not a match. Please make sure the password is same on both fields")
             return
         }
-        registerUser(withEmail: email, withPassword: password)
+        clearAllTextFields()
+        performSegue(withIdentifier: REGISTER_VC_TO_PROFILE_VC_SEGUE_IDENTIFIER, sender: [email,password])
     }
     
 

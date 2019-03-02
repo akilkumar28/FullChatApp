@@ -22,6 +22,8 @@ target 'FullChatApp' do
   pod 'IDMPhotoBrowser'
 
   pod 'ImagePicker'
+  
+  pod 'IQKeyboardManagerSwift'
 
   
 

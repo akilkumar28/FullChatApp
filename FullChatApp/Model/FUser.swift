@@ -427,7 +427,9 @@ func updateCurrentUserInFirestore(withValues : [String : Any], completion: @esca
         userObject.setValuesForKeys(tempWithValues)
         
         reference(.User).document(currentUserId).updateData(withValues) { (error) in
-            
+            if !Thread.isMainThread {
+                fatalError("not in main thread")
+            }
             if error != nil {
                 
                 completion(error)
