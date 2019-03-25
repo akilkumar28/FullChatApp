@@ -319,7 +319,6 @@ func saveUserToFirestore(fUser: FUser) {
 func saveUserLocally(fUser: FUser) {
     
     UserDefaults.standard.set(userDictionaryFrom(user: fUser), forKey: kCURRENTUSER)
-    UserDefaults.standard.synchronize()
 }
 
 
@@ -335,7 +334,6 @@ func fetchCurrentUserFromFirestore(userId: String) {
             print("updated current users param")
             
             UserDefaults.standard.setValue(snapshot.data() as! NSDictionary, forKeyPath: kCURRENTUSER)
-            UserDefaults.standard.synchronize()
 
         }
         
@@ -438,7 +436,6 @@ func updateCurrentUserInFirestore(withValues : [String : Any], completion: @esca
 
             //update current user
             UserDefaults.standard.setValue(userObject, forKeyPath: kCURRENTUSER)
-            UserDefaults.standard.synchronize()
             
             completion(error)
         }

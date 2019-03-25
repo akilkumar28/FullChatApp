@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import Firebase
 
 
 class LoginVC: UIViewController {
@@ -27,6 +28,15 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser != nil {
+            goToAppHome()
+        }
         
     }
     
@@ -60,12 +70,25 @@ class LoginVC: UIViewController {
     
     func goToAppHome() {
         clearAllTextFields()
+        
 
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID: FUser.currentId()])
+        
+        // go to app
+        
+        let mainApplication = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        present(mainApplication, animated: true, completion: nil)
+        
+        
     }
     
-    
-    
     //MARK:- IBActions
+    
+    @IBAction func comingFromLogout(segue: UIStoryboardSegue) {
+    
+    }
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {

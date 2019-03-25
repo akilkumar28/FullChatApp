@@ -68,6 +68,7 @@ public let kAUDIOMAXDURATION = 120.0
 public let kSUCCESS = 2
 
 //recent
+public let kLOGINTHROUGHAUTOLOGIN = "loginThroughAutoLogin"
 public let kCHATROOMID = "chatRoomID"
 public let kUSERID = "userId"
 public let kDATE = "date"

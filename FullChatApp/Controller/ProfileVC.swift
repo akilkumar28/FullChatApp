@@ -89,7 +89,7 @@ class ProfileVC: UIViewController {
                     self.avatarImage = image
                 })
             }
-            let imageData = self.avatarImage?.jpegData(compressionQuality: 0.7)
+            let imageData = UIImageJPEGRepresentation(self.avatarImage!, 0.7)
             let imageDataString = imageData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
             let fullName = fName + " " + lName
             
@@ -108,11 +108,25 @@ class ProfileVC: UIViewController {
                     return
                 }
                 ProgressHUD.dismiss()
-                self.clearAllTextFields()
-                self.dismiss(animated: true, completion: nil)
-                // go to app
+                self.goToAppHome()
             })
         }
+        
+    }
+    
+    func goToAppHome() {
+        clearAllTextFields()
+        
+
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID: FUser.currentId()])
+        
+        // go to app
+        
+        let mainApplication = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        present(mainApplication, animated: true, completion: nil)
+        
         
     }
     
