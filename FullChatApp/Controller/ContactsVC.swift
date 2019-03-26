@@ -122,7 +122,22 @@ class ContactsVC: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        var selectedUser: FUser
+        if searchController.isActive && searchController.searchBar.text != "" {
+            selectedUser = filteredUsers[indexPath.row]
+        } else {
+            let sectionTitle = sectionTitleList[indexPath.section]
+            selectedUser = allUsersGrouped[sectionTitle]![indexPath.row]
+        }
+        performSegue(withIdentifier: "toUserInformationVC", sender: selectedUser)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UserInformationVC {
+            if let sender = sender as? FUser {
+                destination.fUser = sender
+            }
+        }
     }
     
     //MARK:- UISearchResultsUpdating Methods

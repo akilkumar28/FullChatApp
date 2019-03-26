@@ -23,6 +23,7 @@
 		89F29C5922472385000DC50F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F29C5822472385000DC50F /* ContactCell.swift */; };
 		89F29C5B22472594000DC50F /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F29C5A22472594000DC50F /* ContactsVC.swift */; };
 		89F29C5D224861BD000DC50F /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F29C5C224861BD000DC50F /* ChatVC.swift */; };
+		89F29C5F22499E2D000DC50F /* UserInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F29C5E22499E2D000DC50F /* UserInformationVC.swift */; };
 		F3EC85E10B8112868A779506 /* Pods_FullChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		89F29C5822472385000DC50F /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		89F29C5A22472594000DC50F /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 		89F29C5C224861BD000DC50F /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		89F29C5E22499E2D000DC50F /* UserInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationVC.swift; sourceTree = "<group>"; };
 		A9E6342DA0A894150A00630F /* Pods_FullChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				89F29C5622470AB4000DC50F /* SettingsVC.swift */,
 				89F29C5A22472594000DC50F /* ContactsVC.swift */,
 				89F29C5C224861BD000DC50F /* ChatVC.swift */,
+				89F29C5E22499E2D000DC50F /* UserInformationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F29C5D224861BD000DC50F /* ChatVC.swift in Sources */,
+				89F29C5F22499E2D000DC50F /* UserInformationVC.swift in Sources */,
 				89F29C5922472385000DC50F /* ContactCell.swift in Sources */,
 				42CB0B142229C65000B2CB74 /* HelperFunctions.swift in Sources */,
 				42CB0B122229C55F00B2CB74 /* FCollectionReference.swift in Sources */,
