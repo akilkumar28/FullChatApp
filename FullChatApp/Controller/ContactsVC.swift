@@ -122,6 +122,7 @@ class ContactsVC: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         var selectedUser: FUser
         if searchController.isActive && searchController.searchBar.text != "" {
             selectedUser = filteredUsers[indexPath.row]

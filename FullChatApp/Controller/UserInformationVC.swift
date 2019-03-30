@@ -76,7 +76,10 @@ class UserInformationVC: UITableViewController {
             messageButton.isHidden = true
             blockUserButton.isHidden = true
         }
-        if (FUser.currentUser()?.blockedUsers.contains(fUser!.objectId))! {
+        let blockedUsers = FUser.currentUser()!.blockedUsers
+        print(blockedUsers)
+        print(fUser!.objectId)
+        if blockedUsers.contains(fUser!.objectId) {
             blockUserButton.setTitle("Unblock User", for: .normal)
         } else {
             blockUserButton.setTitle("Block User", for: .normal)
@@ -91,17 +94,19 @@ class UserInformationVC: UITableViewController {
     }
     
     @IBAction func messageButtonTapped(_ sender: Any) {
+        startPrivateChat(user1: FUser.currentUser()!, user2: fUser!)
     }
     
     @IBAction func blockUserButtonTapped(_ sender: Any) {
         ProgressHUD.show()
-        if FUser.currentUser()!.blockedUsers.contains(fUser!.objectId) {
-            let removedIndex = FUser.currentUser()?.blockedUsers.index(of: fUser!.objectId)
-            FUser.currentUser()?.blockedUsers.remove(at: removedIndex!)
+        var blockedUsers = FUser.currentUser()!.blockedUsers
+        if blockedUsers.contains(fUser!.objectId) {
+            let removedIndex = blockedUsers.index(of: fUser!.objectId)
+            blockedUsers.remove(at: removedIndex!)
         } else {
-            FUser.currentUser()?.blockedUsers.append(fUser!.objectId)
+            blockedUsers.append(fUser!.objectId)
         }
-        updateCurrentUserInFirestore(withValues: [kBLOCKEDUSERID: FUser.currentUser()!.blockedUsers]) { (error) in
+        updateCurrentUserInFirestore(withValues: [kBLOCKEDUSERID: blockedUsers]) { (error) in
             ProgressHUD.dismiss()
             if error != nil {
                 print(error?.localizedDescription)
